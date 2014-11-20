@@ -39,7 +39,7 @@
 
         var animationSheet = {
             framerate: 0,
-            images: ["../../Content/tracks.png"],
+            images: ["../Content/tracks.png"],
             frames: { width: 60, height: 60, regX: 30, regY: 30 },
             animations: {
                 Empty: [0],
