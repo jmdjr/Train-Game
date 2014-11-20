@@ -7,7 +7,7 @@
 
         var animationSheet = {
             framerate: 4,
-            images: ["/Content/TrainStrip.png"],
+            images: ["../../Content/TrainStrip.png"],
             frames: { width: 60, height: 60, regX: 30, regY: 30 },
             animations: {
                 still: [0, 0],
