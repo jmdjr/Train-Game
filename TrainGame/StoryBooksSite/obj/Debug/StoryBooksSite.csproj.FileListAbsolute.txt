@@ -1,0 +1,10 @@
+C:\Projects2\LS_StoryBooks\StoryBooks\StoryBooksSite\bin\StoryBooksSite.dll
+C:\Projects2\LS_StoryBooks\StoryBooks\StoryBooksSite\bin\StoryBooksSite.pdb
+C:\Projects2\LS_StoryBooks\StoryBooks\StoryBooksSite\obj\Debug\StoryBooksSite.csprojResolveAssemblyReference.cache
+C:\Projects2\LS_StoryBooks\StoryBooks\StoryBooksSite\obj\Debug\StoryBooksSite.dll
+C:\Projects2\LS_StoryBooks\StoryBooks\StoryBooksSite\obj\Debug\StoryBooksSite.pdb
+C:\Users\johndavis\Documents\GitHub\Train-Game\TrainGame\StoryBooksSite\bin\StoryBooksSite.dll
+C:\Users\johndavis\Documents\GitHub\Train-Game\TrainGame\StoryBooksSite\bin\StoryBooksSite.pdb
+C:\Users\johndavis\Documents\GitHub\Train-Game\TrainGame\StoryBooksSite\obj\Debug\StoryBooksSite.csprojResolveAssemblyReference.cache
+C:\Users\johndavis\Documents\GitHub\Train-Game\TrainGame\StoryBooksSite\obj\Debug\StoryBooksSite.dll
+C:\Users\johndavis\Documents\GitHub\Train-Game\TrainGame\StoryBooksSite\obj\Debug\StoryBooksSite.pdb
