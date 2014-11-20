@@ -6,4 +6,4 @@ The work in this repository contains the train game, along with primordial code 
 
 Demo
 ====
-http://rawgit.com/jmdjr/Train-Game/master/TrainGame/StoryBooksSite/Scripts/Default.html
+<a href="http://rawgit.com/jmdjr/Train-Game/master/TrainGame/StoryBooksSite/Scripts/Default.html" target="_blank">Demo</a>
