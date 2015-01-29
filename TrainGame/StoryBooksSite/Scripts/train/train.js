@@ -5,9 +5,11 @@
             this.initialize(gridManager);
         }
 
-        var animationSheet = {
+        var p = trainGame.TrainEngine.prototype = new createjs.Container();
+        trainGame.TrainEngine.prototype.inherited_init = p.initialize;
+
+        trainGame.TrainEngine.AnimationSheet = {
             framerate: 4,
-            images: ["../Content/TrainStrip.png"],
             frames: { width: 60, height: 60, regX: 30, regY: 30 },
             animations: {
                 still: [0, 0],
@@ -21,8 +23,14 @@
             }
         };
 
-        var p = trainGame.TrainEngine.prototype = new createjs.Container();
-        trainGame.TrainEngine.prototype.inherited_init = p.initialize;
+
+        trainGame.TrainEngine.Preload = function (loader) {
+            loader.loadFile({ src: "../Content/TrainStrip.png", id: "train" }, false);
+        }
+
+        trainGame.TrainEngine.PreloadComplete = function (loader) {
+            trainGame.TrainEngine.AnimationSheet.images = loader.getResult("train");
+        }
 
         p.initialize = function (gridManager) {
             var tgDir = trainGame.Direction;
@@ -32,7 +40,7 @@
 
             this.grid = null;
            
-            var spriteSheet = new createjs.SpriteSheet(animationSheet);
+            var spriteSheet = new createjs.SpriteSheet(trainGame.TrainEngine.AnimationSheet);
             this.Animation = new createjs.Sprite(spriteSheet, "start");
 
              //adds transition functionality.
