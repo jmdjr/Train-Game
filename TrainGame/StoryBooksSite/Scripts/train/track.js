@@ -37,16 +37,9 @@
             }
         };
 
-        tg.Track = function (trackId, trackmover) {
-            this.initialize(trackId, trackmover);
-        };
-
-        var p = tg.Track.prototype = new createjs.Container();
-        tg.Track.prototype.inherited_init = p.initialize;
-
-
-        tg.Track.AnimationSheet = {
+        var animationSheet = {
             framerate: 0,
+            images: ["../Content/tracks.png"],
             frames: { width: 60, height: 60, regX: 30, regY: 30 },
             animations: {
                 Empty: [0],
@@ -57,6 +50,12 @@
             }
         };
 
+        tg.Track = function (trackId, trackmover) {
+            this.initialize(trackId, trackmover);
+        };
+
+        var p = tg.Track.prototype = new createjs.Container();
+        tg.Track.prototype.inherited_init = p.initialize;
 
         p.trackId = 0;
         p.sideA = null;
@@ -65,14 +64,6 @@
         p.isMoveable = false;
         p.isLockable = false;
         p.Animation = null;
-
-        tg.Track.Preload = function (loader) {
-            loader.loadFile({ src: "../Content/tracks.png", id: "tracks" }, false);
-        }
-
-        tg.Track.PreloadComplete = function (loader) {
-            tg.Track.AnimationSheet.images = loader.getResult("tracks");
-        }
 
         p.Center = function () {
             return { x: this.parent.x + 30, y: this.parent.y + 30 };
@@ -143,7 +134,7 @@
         }
 
         p._establishTrack = function (animName, sideA, sideB, isMoveable) {
-            var spriteSheet = new createjs.SpriteSheet(tg.Track.AnimationSheet);
+            var spriteSheet = new createjs.SpriteSheet(animationSheet);
             this.Animation = new createjs.Sprite(spriteSheet, animName);
             this.trackType = animName;
 
